@@ -27,6 +27,13 @@ public class WordDictionary
         words = File.ReadAllLines(path);
         wordLengthFrequency = new int[0];
         maxWordLength = 0;
+
+        for (int i = 0; i < words.Length; i++)
+        {
+            string word = words[i];
+            word = word.ToLower();
+            words[i] = word;
+        }
     }
 
     public void PrecomputeWordLengthFrequency()
