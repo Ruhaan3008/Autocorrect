@@ -46,7 +46,7 @@ public class Corrector
         {
             return word2.Length;
         }
-        else if (word2.Length == 0)
+        if (word2.Length == 0)
         {
             return word1.Length;
         }
@@ -77,13 +77,7 @@ public class Corrector
         {
             return "";
         }
-
-        string retWord = "";
-        for (int i = 1; i < word.Length; i++)
-        {
-            retWord += word[i];
-        }
         
-        return retWord;
+        return word.Substring(1);
     }
 }
